@@ -1,0 +1,28 @@
+name: flutter_proxta
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  splashscreen: ^1.2.0
+  flutter_launcher_icons: "^0.7.0"
+
+flutter_icons:
+  image_path: "icon/icon.png"
+  android: true
+  ios: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+   - assets/ic_proxta_logo.png
+   - assets/ic_background.png
