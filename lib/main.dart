@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_proxta/registration_screen.dart';
 import 'dart:async';
 import 'Constant.dart';
 import 'fragments/fourth_fragment.dart';
@@ -22,7 +23,7 @@ main() {
       //SPLASH_SCREEN: (BuildContext context) => new MapScreen(),
       PROFILE: (BuildContext context) => new LoginPage(),
       HOMEPAGE:(BuildContext context) => new MyHomePage(),
-    //  Attend:(BuildContext context) => new FourthFragment(),
+      REG:(BuildContext context) => new RegistrationScreen(),
 
     },
 

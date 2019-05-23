@@ -64,13 +64,9 @@ class SplashScreenState extends State<SplashScreen>
               height: animation.value * 240,
             ), /* add child content here */
           ),
-
-
-
-          Row(
+        /*  Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
-
             children: <Widget>[
                 Text("ATTEND"),
               Text("|"),
@@ -79,6 +75,7 @@ class SplashScreenState extends State<SplashScreen>
                 Text("PERFORM"),
             ],
           )
+          */
         ],
       ),
     );

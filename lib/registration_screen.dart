@@ -1,31 +1,46 @@
 import 'package:flutter/material.dart';
+
 import 'Constant.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key key, this.title}) : super(key: key);
-
+class RegistrationScreen extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
-  final String title;
+  _RegistrationScreenState createState() => _RegistrationScreenState();
 
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegistrationScreenState extends State<RegistrationScreen> {
 
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(HOMEPAGE);
+    Navigator.of(context).pushReplacementNamed(PROFILE);
   }
 
   @override
   Widget build(BuildContext context) {
-
     final emailField = TextField(
       style: style,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(15.0, 12.0, 15.0, 12.0),
           hintText: "Email",
+          border:
+          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
+
+    final nameField = TextField(
+      style: style,
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.fromLTRB(15.0, 12.0, 15.0, 12.0),
+          hintText: "name",
+          border:
+          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
+
+    final contactField = TextField(
+      style: style,
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.fromLTRB(15.0, 12.0, 15.0, 12.0),
+          hintText: "Contact",
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -50,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
         onPressed: () {
           navigationPage();
         },
-        child: Text("Login",
+        child: Text("SAVE",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),
@@ -58,20 +73,8 @@ class _LoginPageState extends State<LoginPage> {
     );
 
 
-
-    final registraiton = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(50.0),
-      color: Colors.redAccent,
-      child: MaterialButton(onPressed: (){
-          navaigationRegPage();
-      },
-      child: Text("Registration",
-      textAlign: TextAlign.center,style: style.copyWith(color: Colors.white,fontWeight: FontWeight.bold),),),
-    );
-
     return Scaffold(
-      backgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Center(
             child: Container(
@@ -89,18 +92,22 @@ class _LoginPageState extends State<LoginPage> {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    SizedBox(height: 45.0),
+                    SizedBox(height: 15.0),
+                    nameField,
+
+                    SizedBox(height: 15.0),
+                    contactField,
+
+                    SizedBox(height: 15.0),
                     emailField,
-                    SizedBox(height: 25.0),
+
+                    SizedBox(height: 15.0),
                     passwordField,
-                    SizedBox(
-                      height: 35.0,
-                    ),
+
+                    SizedBox(height: 15.0,),
+
                     loginButon,
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                    registraiton,
+
                   ],
                 ),
               ),
@@ -108,9 +115,5 @@ class _LoginPageState extends State<LoginPage> {
           ),
         )
     );
-  }
-
-  void navaigationRegPage() {
-    Navigator.of(context).pushReplacementNamed(REG);
   }
 }

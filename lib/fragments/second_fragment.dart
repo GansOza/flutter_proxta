@@ -5,7 +5,7 @@ class SecondFragment extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Center(
-      child: new Text("Hello Fragment 2"),
+      child: new Text("Time Table"),
     );
   }
 

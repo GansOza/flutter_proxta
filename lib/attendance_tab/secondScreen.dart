@@ -8,7 +8,6 @@ class SecondScreen extends StatelessWidget {
       child: Center(
         child: new Image.asset(
           'assets/ic_proxta_logo.png',
-
           fit: BoxFit.fitWidth,
         ),
       ),

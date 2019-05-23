@@ -4,7 +4,9 @@ import './fragments/third_fragment.dart';
 import 'package:flutter/material.dart';
 
 import 'Constant.dart';
+import 'fragments/fifth_fragment.dart';
 import 'fragments/fourth_fragment.dart';
+import 'fragments/sixth_fragment.dart';
 
 class DrawerItem {
   String title;
@@ -41,6 +43,10 @@ class HomePageState extends State<MyHomePage> {
         return new ThirdFragment();
       case 3:
         return FourthFragment();
+      case 4:
+        return FifthFragment();
+      case 5:
+        return SixthFragment();
 
       default:
         return new Text("Error");
@@ -90,7 +96,7 @@ class HomePageState extends State<MyHomePage> {
                 currentAccountPicture: new FadeInImage(
                   placeholder: new AssetImage("assets/ic_proxta_logo.png"),
                   image: new NetworkImage(
-                      'https://www.logolynx.com/images/logolynx/99/99ee3db22b1fd3c57d7072531167117c.jpeddg'),width: 350.0,height: 150.0,
+                      'https://www.logolynx.com/images/logolynx/99/99ee3db22b1fd3c57d7072531167117c.jpeg'),width: 350.0,height: 150.0,
                 )
             ),
             new Column(children: drawerOptions)
