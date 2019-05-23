@@ -3,6 +3,7 @@ import './fragments/second_fragment.dart';
 import './fragments/third_fragment.dart';
 import 'package:flutter/material.dart';
 
+import 'Constant.dart';
 import 'fragments/fourth_fragment.dart';
 
 class DrawerItem {
@@ -27,7 +28,6 @@ class MyHomePage extends StatefulWidget {
     return new HomePageState();
   }
 }
-
 class HomePageState extends State<MyHomePage> {
   int _selectedDrawerIndex = 0;
 
@@ -40,11 +40,18 @@ class HomePageState extends State<MyHomePage> {
       case 2:
         return new ThirdFragment();
       case 3:
-        return new FourthFragment();
+        return FourthFragment();
 
       default:
         return new Text("Error");
     }
+  }
+
+  void navigationPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => FourthFragment()),
+    );
   }
 
   _onSelectItem(int index) {
